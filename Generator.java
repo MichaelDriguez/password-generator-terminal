@@ -1,21 +1,10 @@
 import java.lang.Math;
+import java.util.ArrayList;
 
 public class Generator {
 
+    public ArrayList<String> generatedPasswords = new ArrayList<>();
     StringBuilder str = new StringBuilder();
-    void clearScreen() {
-
-        // This for loop is to clear the terminal after every generated password.
-        for (int i = 0; i < 50; i++) {
-            System.out.println("");
-        }
-    }
-    void title() {
-
-        System.out.println("\n---------------------------");
-        System.out.println(" Secure Password Generator");
-        System.out.println("---------------------------\n");
-    }
     void generator() {
 
         int randomValue;
@@ -32,7 +21,24 @@ public class Generator {
             }
         }
 
-        System.out.println("The generated password is " + str.toString());
+        System.out.println("The generated password is " + str);
+        generatedPasswords.add(str.toString());
+
         str.delete(0,16);
+    }
+
+    void history() {
+
+        if (generatedPasswords.isEmpty()) {
+            System.out.println("Error: No passwords have been generated yet.");
+        }
+
+        int i = 1;
+        for (String str : generatedPasswords) {
+            System.out.println(i + ". " + str);
+            i++;
+        }
+
+        i = 1;
     }
 }
