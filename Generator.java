@@ -48,6 +48,11 @@ public class Generator extends MainMenu {
         System.out.println("         Settings          ");
         System.out.println("---------------------------\n");
 
+        if (passwordLength < 8) {
+            System.out.println("Warning: Generated passwords are less than eight characters long.");
+            System.out.println("This makes these passwords more vulnerable to being compromised.\n");
+        }
+
         System.out.println("Password length: " + passwordLength + " characters.");
     }
 
