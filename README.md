@@ -4,7 +4,7 @@
 
 This program generates secure passwords that one could use for their accounts.
 
-# Features
+## Features
 
 - 16-character password generation.
 - Generated password history.
