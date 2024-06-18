@@ -2,15 +2,24 @@ import java.lang.Math;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Generator extends MainMenu {
+public class Generator {
 
     public ArrayList<String> generatedPasswords = new ArrayList<>();
     StringBuilder str = new StringBuilder();
+    String modify;
+
+    boolean firstCharIsNumber = false;
 
     int passwordLength = 16;
     void generator() {
 
         int randomValue;
+
+        if (firstCharIsNumber == true) {
+            randomValue = (int) (Math.random() * (57 + 1 - 50) + 50);
+            char character = (char) randomValue;
+            str.append(character);
+        }
 
         while (str.length() < passwordLength) {
 
@@ -32,6 +41,10 @@ public class Generator extends MainMenu {
 
     void history() {
 
+        System.out.println("\n---------------------------");
+        System.out.println("      Password History      ");
+        System.out.println("---------------------------\n");
+
         if (generatedPasswords.isEmpty()) {
             System.out.println("Error: No passwords have been generated yet.");
         }
@@ -40,37 +53,6 @@ public class Generator extends MainMenu {
         for (String str : generatedPasswords) {
             System.out.println(i + ". " + str);
             i++;
-        }
-    }
-
-    void displaySettings() {
-        System.out.println("\n---------------------------");
-        System.out.println("         Settings          ");
-        System.out.println("---------------------------\n");
-
-        if (passwordLength < 8) {
-            System.out.println("Warning: Generated passwords are less than eight characters long.");
-            System.out.println("This makes these passwords more vulnerable to being compromised.\n");
-        }
-
-        System.out.println("Password length: " + passwordLength + " characters.");
-    }
-
-    void modifySettings() {
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("\nTip: A strong password typically has 16 or more characters.\n");
-
-        while (true) {
-            System.out.print("Enter password length (1 - 50): ");
-            passwordLength = input.nextInt();
-
-            if (passwordLength < 1 || passwordLength > 50) {
-                System.out.println("Error: Password length outside of range.");
-            } else {
-                System.out.println("Current settings updated.");
-                break;
-            }
         }
     }
 }

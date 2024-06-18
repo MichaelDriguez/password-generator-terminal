@@ -4,7 +4,7 @@ public class MainMenu {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        Generator genOBJ = new Generator();
+        GeneratorSettings genOBJ = new GeneratorSettings();
         int selection;
         String modify;
 
