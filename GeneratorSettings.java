@@ -21,6 +21,14 @@ public class GeneratorSettings extends Generator {
         } else {
             System.out.println("No");
         }
+
+        System.out.print("Includes symbols: ");
+
+        if (generateWithSymbols) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
     }
 
     void modifySettings() {
@@ -35,9 +43,10 @@ public class GeneratorSettings extends Generator {
 
             System.out.println("""
                     1. Display current settings.
-                    2. Change length of generated passwords.
-                    3. Toggle Option - Number as first character.
-                    4. Return to main menu.
+                    2. Change Option - Password length.
+                    3. Toggle Option - First character is a number.
+                    4. Toggle Option - Includes symbols.
+                    5. Return to main menu.
                     """);
 
             System.out.print("Please select an option: ");
@@ -66,7 +75,7 @@ public class GeneratorSettings extends Generator {
                     break;
                 case 3:
                     while (true) {
-                        System.out.println("\nDo you want the first character to be a digit?");
+                        System.out.println("\nDo you want the first character to be a number?");
                         System.out.print("(Y/N): ");
                         modify = input.next();
 
@@ -84,6 +93,25 @@ public class GeneratorSettings extends Generator {
                     }
                     break;
                 case 4:
+                    while (true) {
+                        System.out.println("\nDo you want to include symbols for password generation?");
+                        System.out.print("(Y/N): ");
+                        modify = input.next();
+
+                        if (modify.equals("Y") || modify.equals("y")) {
+                            generateWithSymbols = true;
+                            System.out.println("Current settings updated.");
+                            break;
+                        } else if (modify.equals("N") || modify.equals("n")) {
+                            generateWithSymbols = false;
+                            System.out.println("Current settings updated.");
+                            break;
+                        } else {
+                            System.out.println("Error: Invalid option.");
+                        }
+                    }
+                    break;
+                case 5:
                     System.out.println("Returning to main menu...");
                     returnToMainMenu = true;
                     break;

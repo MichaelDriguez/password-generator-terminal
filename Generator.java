@@ -9,6 +9,7 @@ public class Generator {
     String modify;
 
     boolean firstCharIsNumber = false;
+    boolean generateWithSymbols = true;
 
     int passwordLength = 16;
     void generator() {
@@ -16,14 +17,24 @@ public class Generator {
         int randomValue;
 
         if (firstCharIsNumber == true) {
-            randomValue = (int) (Math.random() * (57 + 1 - 50) + 50);
+            randomValue = (int) (Math.random() * (57 + 1 - 48) + 48);
             char character = (char) randomValue;
             str.append(character);
         }
 
+        if (generateWithSymbols == true) {
+            while (str.length() < passwordLength) {
+
+                randomValue = (int) (Math.random() * (126 + 1 - 48) + 48);
+                char character = (char) randomValue;
+
+                str.append(character);
+            }
+        }
+
         while (str.length() < passwordLength) {
 
-            randomValue = (int) (Math.random() * (126 + 1 - 50) + 50);
+            randomValue = (int) (Math.random() * (126 + 1 - 48) + 48);
             char character = (char) randomValue;
 
             if (Character.isDigit(character)) {
