@@ -13,7 +13,12 @@ public class GeneratorSettings extends Generator {
             System.out.println("This makes these passwords more vulnerable to being compromised.\n");
         }
 
-        System.out.println("Password length: " + passwordLength + " characters");
+        if (passwordLength == 1) {
+            System.out.println("Password length: " + passwordLength + " character");
+        } else {
+            System.out.println("Password length: " + passwordLength + " characters");
+        }
+
         System.out.print("First character is a number: ");
 
         if (firstCharIsNumber) {
@@ -58,14 +63,14 @@ public class GeneratorSettings extends Generator {
                     break;
                 }
                 case 2:
+
+                    System.out.println("\nTip: A strong password typically has 16 or more characters.\n");
+
                     while (true) {
-
-                        System.out.println("\nTip: A strong password typically has 16 or more characters.\n");
-
-                        System.out.print("Enter password length (1 - 50): ");
+                        System.out.print("Enter password length (1 - 100): ");
                         passwordLength = input.nextInt();
 
-                        if (passwordLength < 1 || passwordLength > 50) {
+                        if (passwordLength < 1 || passwordLength > 100) {
                             System.out.println("Error: Password length outside of range.");
                         } else {
                             System.out.println("Current settings updated.");
