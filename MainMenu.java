@@ -8,6 +8,7 @@ public class MainMenu {
         int selection;
         String modify;
 
+        // The main menu, which loops indefinitely.
         while (true) {
 
             System.out.println("\n---------------------------");
@@ -25,10 +26,10 @@ public class MainMenu {
             selection = input.nextInt();
 
             switch (selection) {
-                case 1:
+                case 1: // 1. Generate a password.
                     genOBJ.generator();
                     break;
-                case 2:
+                case 2: // 2. Show current password generation settings.
                     genOBJ.displaySettings();
 
                     while (true) {
@@ -46,10 +47,10 @@ public class MainMenu {
                         }
                     }
                     break;
-                case 3:
+                case 3: // 3. Show previously generated passwords.
                     genOBJ.history();
                     break;
-                case 4:
+                case 4: // 4. Exit program.
                     System.out.println("Program exited successfully.");
                     System.exit(0);
                     break;
