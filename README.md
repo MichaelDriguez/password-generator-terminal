@@ -14,4 +14,4 @@ This program generates secure passwords that one could use for their accounts.
 
 ## License
 
-MIT License.
+This project is available under the [MIT License.](https://github.com/MichaelDriguez/secure-password-generator/blob/main/LICENSE)
