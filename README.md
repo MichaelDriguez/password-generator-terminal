@@ -23,7 +23,7 @@ A simple program that generates secure passwords that one could use for their ac
    ```
    cd secure-password-generator
    ```
-3. Compile the projects:
+3. Compile the program:
    ```
    javac *.java
    ```
