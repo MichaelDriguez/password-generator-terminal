@@ -1,7 +1,8 @@
 # Password Generator - Terminal
 
-![Language](https://img.shields.io/badge/Language-Java-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/michaeldriguez/password-generator-terminal)
+![GitHub license](https://img.shields.io/github/license/michaeldriguez/password-generator-terminal)
+[![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white)](#)
 
 A simple program that generates secure passwords that one could use for their accounts.
 
