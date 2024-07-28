@@ -1,4 +1,4 @@
-# Secure Password Generator
+# Password Generator - Terminal
 
 ![Language](https://img.shields.io/badge/Language-Java-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
