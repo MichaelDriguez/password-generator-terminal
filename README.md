@@ -17,11 +17,11 @@ A simple program that generates secure passwords that one could use for their ac
 
 1. Clone this repository:
    ```
-   git clone https://github.com/MichaelDriguez/secure-password-generator.git
+   git clone https://github.com/MichaelDriguez/password-generator-terminal.git
    ```
 2. Navigate to the project directory:
    ```
-   cd secure-password-generator
+   cd password-generator-terminal
    ```
 3. Compile the program:
    ```
@@ -39,7 +39,7 @@ java MainMenu
 
 ## License
 
-This project is available under the [MIT License.](https://github.com/MichaelDriguez/secure-password-generator/blob/main/LICENSE)
+This project is available under the [MIT License.](https://github.com/MichaelDriguez/password-generator-terminal/blob/main/LICENSE)
 
 ## Author
 
